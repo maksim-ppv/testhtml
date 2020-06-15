@@ -1,0 +1,45 @@
+body
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    font-size: 20px
+    color: #000000
+.container
+    width: 100%
+    max-width: 1000px
+    margin: 0px auto
+.lock
+    overflow-y: hidden  
+@media (max-width: 1299px)
+    .container
+        max-width: 960px
+        margin: auto  
+@media (max-width: 991px)
+    .container
+        max-width: 750px
+@media (max-width: 768px)
+    .container
+        min-width: 100%
+        padding: 0 20px
+button:active, button:focus
+    outline: none !important
+
+button::-moz-focus-inner
+    border: 0 !important
+button
+    border: none
+    background: none
+section
+    padding: 20px 0px
+.wrapper
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+.fullscreen
+    min-height: 100vh
+    display: flex
+
+$maxWidth: 1000
+
+@mixin adaptiv-font($pcSize, $mobSize) 
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))

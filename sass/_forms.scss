@@ -1,0 +1,73 @@
+//<SELECT (sel+tab)>====================================================================================================
+select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #ffffff;
+    background-image: url(../img/arrow.svg);
+	background-position: right 0.85em center;
+    background-repeat: no-repeat;
+	color: #000000;
+	font-family: "Myriad Pro";
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40.92px;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: 2px solid #aeaeae;
+	width: 100%;
+	padding-left: 30px;
+	border-radius: 10px;
+}
+select::-ms-expand {  /* для IE */ 
+	display: none;
+}
+
+//</SELECT>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.input{
+	padding: 0px 15px;
+	&.focus{}
+	&.err{
+		border: 1.5px solid red;
+	}
+}
+.window__input { 
+	-moz-appearance: textfield;
+  }
+.window__input::-webkit-inner-spin-button { 
+	display: none;
+  }
+.input {
+	border: none;
+	min-width: 100px;
+}
+.buffer {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	visibility: hidden;
+	white-space: nowrap;
+  }
+//</INPUT>====================================================================================================
+
+//<OPTIONS (opt+tab)>====================================================================================================
+.option{position: relative;cursor: pointer;padding-left: 25px;line-height: 16px;margin-bottom: 10px;font-size: 15px;font-weight: 300;
+	&:last-child{margin-bottom:0px;}
+	input{display: none;}
+	&:before{position: absolute;left: 0;top: 0;width: 16px;height: 16px;content: '';border: 1px solid #7f7f7f;border-radius: 50%;}
+	&.active{
+		&:before{background-color: #9da3d7}
+	}
+}
+//</OPTIONS>====================================================================================================

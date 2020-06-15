@@ -1,0 +1,221 @@
+.calc__title
+    padding: 25px 0px 20px 0px
+    letter-spacing: 0.2px
+    line-height: 28px
+.calc__windows 
+    display: flex 
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 13px 0px 0px 0px
+.calc__window
+    margin: 0px auto
+    padding: 0px 15px  
+.window__item
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    flex: 0 0 15%
+    cursor: pointer
+.window__link 
+    text-align: center
+    padding: 10px
+    font-size: 14px
+    font-weight: 700
+    line-height: 45px
+    letter-spacing: 0.35px
+.calc__window_active
+    .window__link
+        text-decoration: underline
+        color: #0099de
+.options
+    display: flex
+    flex-wrap: wrap
+.option
+    margin-right: 30px
+
+.calc-block
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.23), inset 1px 2px 6px rgba(0, 0, 0, 0.35)
+    border-radius: 10px
+    padding: 60px 60px 40px 55px
+.calc-block__top
+    display: flex
+    justify-content: space-between 
+    flex-wrap: wrap
+.calc-block__window
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 0 0 40%
+.window__size
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+        margin: 20px 25px 0px
+
+.calc-block__img
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    color: #636363
+    font-family: "Myriad Pro - Semibold It"
+    font-size: 22px
+    font-weight: 400
+    line-height: 40px
+    height: 100%
+    padding: 20px
+.windows__img
+    position: relative
+    height: 100%
+    min-height: 164px
+    padding: 30px
+    &:before
+        content: 'высота'
+        position: absolute
+        left: -150px
+        top: 50%
+        transform: translateY(-50%) rotate(-90deg)
+    
+    &:after
+        content: 'ширина'
+        position: absolute
+        top: -50px
+        transform: translateX(-50%)
+    img
+        object-fit: contain
+        position: absolute
+        height: 100%
+        max-width: 200px
+        left: 50%
+        top: 50%
+        transform: translateX(-50%) translateY(-50%)
+        -webkit-transition: opacity 1s ease-in-out
+        -moz-transition: opacity 1s ease-in-out
+        -o-transition: opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out
+        opacity: 0
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+        filter: alpha(opacity=0)
+.setting__title
+    h3
+        position: absolute
+        left: 0
+        top: 0
+        -webkit-transition: opacity 1s ease-in-out
+        -moz-transition: opacity 1s ease-in-out
+        -o-transition: opacity 1s ease-in-out
+        transition: opacity 1s ease-in-out
+        opacity: 0
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+        filter: alpha(opacity=0)
+
+#windows .windows_active
+    opacity: 1
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    filter: alpha(opacity=1)
+.window__height-width 
+    display: flex
+    flex-direction: column
+.window__title
+    text-align: center 
+.window__input
+    border: 2px solid #a2a2a2
+    border-radius: 10px
+    font-size: 36px
+    line-height: 29.68px
+    color: #5d5d5d
+    padding: 0px 5px
+    text-align: center
+    max-width: 125px
+.calc-block__setting
+    margin-left: auto
+    position: relative 
+.setting__title
+    color: #0099de
+    font-family: "Myriad Pro"
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: 0.75px
+    margin-bottom: 50px 
+    height: 30px
+form
+    margin-top: 20px
+.setting-point__one 
+    // margin-top: 50px
+    margin-bottom: 50px
+.setting-point__title
+    font-family: "Myriad Pro - Semibold"
+    font-size: 24px
+    font-weight: 400
+    line-height: 40px 
+.setting-point__two
+    display: inline-block 
+.contact__block
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    padding-top: 30px
+.contact__input  
+    display: block
+    color: #424242
+    font-family: "Myriad Pro"
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.45px 
+    padding: 12px 53px
+    background: url('../img/user.jpg') left 10px center no-repeat, #c6c6c6 url('../img/userbg.svg') left 0.5px center no-repeat
+    border-radius: 10px
+    margin: 10px
+    border: 1.5px solid #ffffff
+    min-width: 285px
+.contact__button 
+    border-radius: 10px
+    background-color: #9da3d7
+    color: #ffffff
+    font-family: "Myriad Pro"
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 12px 80px
+    margin: 10px
+    min-width: 285px
+
+@media (max-width: 991.98px)
+    .calc-block__window 
+        margin-bottom: 50px
+        flex: 0 0 100%
+    .calc-block__setting
+        margin-left: 0 
+    .calc-block__img
+        padding-top: 30px
+
+@media (max-width: 767.98px)
+    .contact__block
+        justify-content: flex-start
+
+@media (max-width: 479.98px)
+    .window__size
+        flex-direction: column
+        margin: 0
+    .window__height-width
+        margin-top: 15px
+    .calc-block
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 30px
+    .contact__input  
+        min-width: 100%
+        margin-left: 0
+    .contact__button 
+        padding: 12px 10px
+        min-width: 100%
+        margin-left: 0
+    .windows__img
+        &:before
+            left: -130px
+        &:after
+            top: -40px
