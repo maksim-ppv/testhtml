@@ -97,12 +97,12 @@ if($('.slider').length>0){
 $(document).ready(function() {
 	$("#windows_controls").on('click', 'li', function() {
 	  $("#windows img").removeClass("windows_active");
-	  $("#windows h3").removeClass("windows_active");
+	  $("#windows_text h3").removeClass("windows_active");
   
 	  var newImage = $(this).index();
   
 	  $("#windows img").eq(newImage).addClass("windows_active");
-	  $("#windows h3").eq(newImage).addClass("windows_active");
+	  $("#windows_text h3").eq(newImage).addClass("windows_active");
   
 	  $("#windows_controls li").removeClass("calc__window_active");
 	  $(this).addClass("calc__window_active");

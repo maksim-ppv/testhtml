@@ -843,7 +843,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   filter: alpha(opacity=0);
 }
 
-#windows .windows_active {
+#windows .windows_active, #windows_text .windows_active {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
